@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#02030a">
+<title>Plantiverse · Explore</title>
+<meta name="description" content="The Plantiverse brain: 8,000 species, phytoremediation from 605 publications, vegetation indices, platform, sites, patents, events and collaborations, as one map.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.plantiverse.it/esplora.html">
+<link rel="icon" type="image/png" href="assets/brand/favicon-128.png">
+<link rel="stylesheet" href="assets/css/nova.css">
+<link rel="stylesheet" href="assets/css/esplora.css">
+</head>
+<body class="xb">
+
+<header class="top is-solid">
+  <div class="wrap top__in">
+    <a class="brand" href="index.html" aria-label="Plantiverse, home">
+      <img src="assets/brand/mark-white-96.png" width="96" height="126" alt="" aria-hidden="true">
+      <span>PLANTIVERSE</span>
+    </a>
+    <span class="xb-crumb" data-t="crumb">Explore</span>
+    <div class="top__side">
+      <a class="xb-back" href="index.html#data" data-t="back">Back to the site</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="xb-main" id="main">
+  <canvas id="gl" aria-label="Map of everything Plantiverse publishes"></canvas>
+  <div class="xb-labels" id="labels" aria-hidden="true"></div>
+  <div class="xb-tip" id="tip" hidden></div>
+
+  <form class="xb-search" id="search" role="search" autocomplete="off">
+    <input id="q" type="search" data-tp="placeholder" placeholder="Search a species, a pollutant, an index, a site…" aria-label="Search">
+    <button type="submit" data-t="go">Search</button>
+  </form>
+  <ol class="xb-results" id="results" hidden></ol>
+
+  <aside class="xb-left" id="left" aria-live="polite"></aside>
+  <aside class="xb-right" id="right"></aside>
+
+  <div class="xb-tools">
+    <button type="button" id="zin" aria-label="Zoom in">+</button>
+    <button type="button" id="zout" aria-label="Zoom out">&minus;</button>
+    <button type="button" id="home" data-ta="home" aria-label="Whole brain">&#8962;</button>
+  </div>
+  <p class="xb-hint" id="hint"></p>
+  <div class="xb-load" id="load"><span></span></div>
+</main>
+
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/js/nova-content.js"></script>
+<script src="assets/js/ai-content.js"></script>
+<script src="assets/js/esplora-data.js"></script>
+<script src="assets/js/esplora.js"></script>
+</body>
+</html>
