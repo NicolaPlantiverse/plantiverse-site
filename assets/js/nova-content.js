@@ -299,7 +299,7 @@ window.NOVA = (function () {
       "fields.video": "On stage at the European Union Agency for the Space Programme",
 
       "flora.eyebrow": "06 / Flora",
-      "flora.title": "Six thousand species, and the ones we have actually observed.",
+      "flora.title": "Six thousand species in the database. The ones we have already observed are marked.",
       "flora.lede": "The list the platform works on. Type a name. Species marked as observed have been through a Plantiverse acquisition, the others are in the reference list only.",
       "flora.ph": "Try aloe, vitis, lavandula",
       "flora.observed": "Observed", "flora.listed": "In the list",
@@ -385,7 +385,7 @@ window.NOVA = (function () {
       "fields.video": "Sul palco dell'Agenzia dell'Unione europea per il programma spaziale",
 
       "flora.eyebrow": "06 / Flora",
-      "flora.title": "Seimila specie, e quelle che abbiamo osservato davvero.",
+      "flora.title": "Seimila specie nel database. Quelle che abbiamo già osservato sono segnalate.",
       "flora.lede": "L'elenco su cui lavora la piattaforma. Scrivi un nome. Le specie segnate come osservate sono passate da un'acquisizione Plantiverse, le altre stanno solo nell'elenco di riferimento.",
       "flora.ph": "Prova aloe, vitis, lavandula",
       "flora.observed": "Osservata", "flora.listed": "Nell'elenco",

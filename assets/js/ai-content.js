@@ -126,6 +126,16 @@
     method
   );
 
+  /* --- record: closed loop on irrigation (FAO site). Stays off until the
+     [DA COMPLETARE] fields hold real data; then set FAO_READY = true. ------ */
+  const FAO_READY = false;
+  if (FAO_READY) {
+    N.record.splice(N.record.length - 1, 0,
+      { type: "data", date: "[DA COMPLETARE: anno]",
+        en: { title: "Closed loop at the FAO site: the model reads plant stress and drives a small irrigation unit on its own, within set limits", src: "[DA COMPLETARE: sensore, periodo, numero di interventi] · internal" },
+        it: { title: "Anello chiuso al sito FAO: il modello legge lo stress delle piante e comanda da solo un piccolo irrigatore, entro limiti impostati", src: "[DA COMPLETARE: sensore, periodo, numero di interventi] · interno" } });
+  }
+
   /* --- team: one line moves toward the models ----------------------------- */
   N.team.forEach((m) => {
     if (m.id === "andrea") {
@@ -142,13 +152,13 @@
     "nav.data": "Data", "nav.instruments": "Sensors",
 
     "hero.eyebrow": "Artificial intelligence for living systems · Rome",
-    "hero.lede": "Our artificial intelligence listens. It reads every plant together with satellites, weather and the history of the site, and proposes the next move with its confidence and its source.",
+    "hero.lede": "Our artificial intelligence listens to every plant. It reads stress together with satellites, weather and the history of the site, and decides the action that keeps your green area lush and productive. Where irrigation or lighting is connected, it acts on its own, within the limits you set.",
     "hero.invite": "Bring your green areas or biological systems: the model learns your site.",
     "hero.cta1": "See how it reasons",
     "hero.canvas": "A plant drawn as a neural network: signals travel from the leaves, where the data arrive, down to the root, where the decision forms.",
 
     "mind.eyebrow": "01 / The reasoning",
-    "mind.title": "One question, five sources, one decision.",
+    "mind.title": "One site, five sources, one decision.",
     "mind.lede": "Pick a site. See which data matter, which model takes the lead and what the system proposes, with its confidence and the check that would prove it wrong.",
     "mind.inputs": "What the model reads", "mind.weight": "weight",
     "mind.move": "Next move", "mind.conf": "Confidence", "mind.why": "Why", "mind.refute": "What would prove it wrong", "mind.check": "Check",
@@ -156,7 +166,7 @@
     "mind.credit": "Illustrative scenarios: they show the format of a platform decision (data, weights, confidence, check). Values are built for the example, not measured.",
 
     "machine.eyebrow": "02 / How it sees",
-    "machine.title": "The camera gathers light. The model makes it a map.",
+    "machine.title": "The camera records light. The model draws the map.",
     "machine.lede": "On the left, what arrives from the sensor. On the right, the same scene rewritten by the model as one value per point, the first step before deciding where to look. Drag the handle.",
     "machine.right": "Index map · what the model reads",
 
@@ -188,7 +198,7 @@
     "flora.eyebrow": "07 / Flora",
 
     "inst.eyebrow": "08 / Sensors",
-    "inst.title": "Sensors are the eyes. The reasoning is ours.",
+    "inst.title": "The sensors are the eyes. We provide the brain.",
     "inst.lede": "The model works with multispectral cameras, with our own Ecomotica stations and with public satellites. The sensor changes from site to site, the model that reads it stays the same.",
 
     "rec.eyebrow": "09 / The record",
@@ -208,13 +218,13 @@
     "nav.data": "Dati", "nav.instruments": "Sensori",
 
     "hero.eyebrow": "Intelligenza artificiale per i sistemi viventi · Roma",
-    "hero.lede": "La nostra intelligenza artificiale le ascolta. Legge ogni pianta insieme a satelliti, meteo e storia del sito, e propone la prossima mossa con la sua confidenza e la sua fonte.",
+    "hero.lede": "La nostra intelligenza artificiale ascolta ogni pianta. Legge lo stress insieme a satelliti, meteo e storia del sito, e decide l'intervento che mantiene il tuo spazio verde rigoglioso e produttivo. Dove irrigazione o luci sono collegate, agisce da sola, nei limiti che imposti tu.",
     "hero.invite": "Porta le tue aree verdi o i tuoi sistemi biologici: il modello impara il tuo sito.",
     "hero.cta1": "Guarda come ragiona",
     "hero.canvas": "Una pianta disegnata come una rete neurale: i segnali viaggiano dalle foglie, dove arrivano i dati, fino alla radice, dove si forma la decisione.",
 
     "mind.eyebrow": "01 / Il ragionamento",
-    "mind.title": "Una domanda, cinque fonti, una decisione.",
+    "mind.title": "Un sito, cinque fonti, una decisione.",
     "mind.lede": "Scegli un sito. Guarda quali dati contano, quale modello prende la parola e cosa propone il sistema, con la sua confidenza e la verifica che lo smentirebbe.",
     "mind.inputs": "Cosa legge il modello", "mind.weight": "peso",
     "mind.move": "Prossima mossa", "mind.conf": "Confidenza", "mind.why": "Perché", "mind.refute": "Cosa la smentirebbe", "mind.check": "Verifica",
@@ -222,7 +232,7 @@
     "mind.credit": "Scenari illustrativi: mostrano il formato di una decisione della piattaforma (dati, pesi, confidenza, verifica). I valori sono costruiti per l'esempio, non misurati.",
 
     "machine.eyebrow": "02 / Come vede",
-    "machine.title": "La camera raccoglie luce. Il modello ne fa una mappa.",
+    "machine.title": "La fotocamera cattura la luce. Il modello la trasforma in una mappa.",
     "machine.lede": "A sinistra quello che arriva dal sensore. A destra la stessa scena trasformata dal modello in un valore per ogni punto, il primo passo prima di decidere dove guardare. Trascina la maniglia.",
     "machine.right": "Mappa di indice · quello che legge il modello",
 
@@ -254,7 +264,7 @@
     "flora.eyebrow": "07 / Flora",
 
     "inst.eyebrow": "08 / Sensori",
-    "inst.title": "I sensori sono gli occhi. Il ragionamento è nostro.",
+    "inst.title": "I sensori sono gli occhi. Noi forniamo il cervello.",
     "inst.lede": "Il modello lavora con camere multispettrali, con le nostre stazioni Ecomotica e con i satelliti pubblici. Il sensore cambia da un sito all'altro, il modello che lo legge resta lo stesso.",
 
     "rec.eyebrow": "09 / Il registro",

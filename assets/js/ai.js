@@ -251,8 +251,8 @@
         '<div class="inst__specs" style="grid-template-columns:1fr">' +
         '<div><dt>' + esc(i18n.get("machine.left")) + "</dt><dd>" +
         (lang === "it"
-          ? "La vegetazione sana riflette molto nel vicino infrarosso, e in falso colore diventa la parte accesa dell'immagine."
-          : "Healthy vegetation reflects strongly in the near infrared, and in false colour it becomes the bright part of the frame.") +
+          ? "La vegetazione sana riflette molto nel vicino infrarosso, quindi nell'immagine in falso colore appare più luminosa."
+          : "Healthy vegetation reflects strongly in the near infrared, so in the false-colour image it shows up brightest.") +
         "</dd></div>" +
         '<div><dt>' + esc(i18n.get("machine.right")) + "</dt><dd>" +
         (lang === "it"
