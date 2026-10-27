@@ -262,3 +262,13 @@ html.is-locked { overflow: hidden; }
 }
 .psim__chart { position: relative; }
 .psim__heatl { position: absolute; top: 14px; transform: translateX(-50%); white-space: nowrap; color: var(--amber); font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* --- pilot section (27/10) ------------------------------------------------ */
+.pilot3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 2vw, 28px); margin-top: clamp(24px, 3vw, 44px); }
+.pilot3 article { border-top: 1px solid currentColor; padding-top: 18px; }
+.pilot3 .mono { opacity: .6; }
+.pilot3 h3 { font-size: clamp(1.15rem, 1.6vw, 1.45rem); margin: 8px 0 10px; }
+.pilot3 p { line-height: 1.6; max-width: 38ch; }
+.pilot__note { margin-top: 22px; max-width: 70ch; line-height: 1.6; }
+#pilot .btn-row { margin-top: 28px; }
+@media (max-width: 860px) { .pilot3 { grid-template-columns: 1fr; } }

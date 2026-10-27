@@ -59,6 +59,11 @@
       $$("[data-i18n]").forEach((el) => { el.textContent = i18n.get(el.dataset.i18n); });
       $$("[data-i18n-html]").forEach((el) => { el.innerHTML = i18n.get(el.dataset.i18nHtml); });
       $$("[data-i18n-aria]").forEach((el) => { el.setAttribute("aria-label", i18n.get(el.dataset.i18nAria)); });
+      $$("[data-lang-href]").forEach((el) => {
+        const m = el.dataset.langHref.split(",").map((x) => x.split(":"));
+        const hit = m.filter((x) => x[0] === next)[0];
+        if (hit) el.setAttribute("href", hit[1]);
+      });
       $$("[data-i18n-alt]").forEach((el) => { el.setAttribute("alt", i18n.get(el.dataset.i18nAlt)); });
       $$("[data-i18n-ph]").forEach((el) => { el.setAttribute("placeholder", i18n.get(el.dataset.i18nPh)); });
       $$(".lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === next)));

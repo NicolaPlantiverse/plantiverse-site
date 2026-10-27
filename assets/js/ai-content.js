@@ -348,4 +348,60 @@
       "Ahmad, R., & Misra, N. (2014). Evaluation of phytoremediation potential of Catharanthus roseus with respect to chromium contamination. American Journal of Plant Sciences."
     ]
   };
+
+  /* --- 27/10: buyer-facing layer — what we sell, to whom, in how long ------ */
+  Object.assign(N.i18n.en, {
+    "meta.title": "Plantiverse · natural capital evidence from satellites and AI",
+    "meta.desc": "A 4-6 week pilot that turns satellite, weather and site data into sourced evidence on the state and change of your land, forests and green infrastructure. No hardware needed.",
+    "hero.eyebrow": "Natural capital evidence for land, forests and green assets · Rome",
+    "hero.lede": "We read your sites from space and from the ground, with satellites, weather and site history, and give you indicators of state and change where every figure carries its source, its date and its confidence. Useful when you must show, to an auditor, a lender or an investor, what is happening to your green assets.",
+    "hero.invite": "A pilot takes 4 to 6 weeks and needs no hardware: send us the boundaries of one to three sites.",
+    "hero.cta1": "How the pilot works",
+    "hero.cta2": "Request a pilot",
+    "nav.pilot": "Pilot",
+    "pilot.eyebrow": "The pilot",
+    "pilot.title": "Four to six weeks, no hardware, one report you can show.",
+    "pilot.lede": "Built for owners and managers of land, forests, estates, logistics sites and infrastructure with green areas, who need evidence on their natural assets and today get it from rare, costly site visits.",
+    "pilot.c1t": "You send",
+    "pilot.c1": "The boundaries of one to three sites (KML or shapefile), what you already hold (surveys, inventories, reports) and the question: reporting, a lender, a buyer or day-to-day management.",
+    "pilot.c2t": "We build",
+    "pilot.c2": "Time series of vegetation indices from the public Copernicus Sentinel-2 archive, aligned with weather and site history. Change maps, anomalies explained or flagged, and the limits of what a satellite can and cannot see.",
+    "pilot.c3t": "You receive",
+    "pilot.c3": "A report and platform access. Every figure comes with source, date and confidence, plus the check that would prove it wrong. Optionally, our MAPIR multispectral cameras shipped to you for ground checks.",
+    "pilot.not": "What it is not: not a certification, not a carbon-credit issuance, not a substitute for your qualified auditor or forester. It is evidence to work with them.",
+    "pilot.fee": "Scope and terms are agreed after a 30-minute call. The effort depends on the sites, so we propose after hearing what you need.",
+    "pilot.go": "Request a pilot",
+    "pilot.page": "Read the natural capital page",
+    "contact.title": "Tell us about your sites.",
+    "contact.lede": "Choose the reason that fits. For a pilot, a short message with the type of site, its size and what you need to show is enough: we reply within two working days."
+  });
+  Object.assign(N.i18n.it, {
+    "meta.title": "Plantiverse · evidenze sul capitale naturale da satelliti e AI",
+    "meta.desc": "Un pilota di 4-6 settimane che trasforma dati satellitari, meteo e storia del sito in evidenze con fonte sullo stato e sulla variazione di terreni, foreste e verde infrastrutturale. Nessun hardware necessario.",
+    "hero.eyebrow": "Evidenze sul capitale naturale di terreni, foreste e verde · Roma",
+    "hero.lede": "Leggiamo i tuoi siti dallo spazio e da terra, con satelliti, meteo e storia del sito, e ti consegniamo indicatori di stato e variazione in cui ogni numero porta fonte, data e confidenza. Serve quando devi mostrare a un revisore, a una banca o a un investitore cosa succede ai tuoi asset verdi.",
+    "hero.invite": "Un pilota dura da 4 a 6 settimane e non richiede hardware: ci basta il perimetro di uno-tre siti.",
+    "hero.cta1": "Come funziona il pilota",
+    "hero.cta2": "Richiedi un pilota",
+    "nav.pilot": "Pilota",
+    "pilot.eyebrow": "Il pilota",
+    "pilot.title": "Da quattro a sei settimane, nessun hardware, un rapporto che puoi mostrare.",
+    "pilot.lede": "Pensato per proprietari e gestori di terreni, foreste, tenute, siti logistici e infrastrutture con aree verdi, che hanno bisogno di evidenze sui propri asset naturali e oggi le ottengono da sopralluoghi rari e costosi.",
+    "pilot.c1t": "Tu invii",
+    "pilot.c1": "Il perimetro di uno-tre siti (KML o shapefile), ciò che hai già (rilievi, inventari, relazioni) e la domanda: rendicontazione, una banca, un acquirente o la gestione quotidiana.",
+    "pilot.c2t": "Noi costruiamo",
+    "pilot.c2": "Serie temporali di indici di vegetazione dall'archivio pubblico Copernicus Sentinel-2, allineate a meteo e storia del sito. Mappe di variazione, anomalie spiegate o segnalate, e i limiti di ciò che un satellite può e non può vedere.",
+    "pilot.c3t": "Tu ricevi",
+    "pilot.c3": "Un rapporto e l'accesso alla piattaforma. Ogni numero con fonte, data e confidenza, più la verifica che lo smentirebbe. Se vuoi, le nostre camere multispettrali MAPIR spedite a casa tua per i controlli a terra.",
+    "pilot.not": "Cosa non è: non è una certificazione, non è un'emissione di crediti di carbonio, non sostituisce il tuo revisore o il tuo forestale qualificato. È un'evidenza con cui lavorare insieme a loro.",
+    "pilot.fee": "Perimetro e condizioni si concordano dopo una chiamata di 30 minuti. L'impegno dipende dai siti, quindi proponiamo dopo aver capito di cosa hai bisogno.",
+    "pilot.go": "Richiedi un pilota",
+    "pilot.page": "Leggi la pagina sul capitale naturale",
+    "contact.title": "Raccontaci i tuoi siti.",
+    "contact.lede": "Scegli il motivo giusto. Per un pilota basta un breve messaggio con il tipo di sito, la sua estensione e ciò che devi dimostrare: rispondiamo entro due giorni lavorativi."
+  });
+  N.intents[0] = Object.assign({}, N.intents[0], {
+    en: { name: "Request a pilot", line: "Tell us the site, its size and what you need to show. The answer is a scope of work, what we would measure and what we would not." },
+    it: { name: "Richiedi un pilota", line: "Dicci il sito, la sua estensione e ciò che devi dimostrare. La risposta è un piano di lavoro, con ciò che misureremmo e ciò che no." }
+  });
 })();
