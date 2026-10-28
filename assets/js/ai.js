@@ -696,33 +696,36 @@
 
       // branches
       ctx.lineCap = "round";
+      ctx.shadowColor = "rgba(150,240,120,0.9)"; ctx.shadowBlur = 14;
       for (let i = 1; i < nodes.length; i++) {
         const n = nodes[i], p = nodes[n.parent];
         const prog = Math.max(0, Math.min(1, (t - p.birth) / (n.birth - p.birth)));
         if (prog <= 0) continue;
         const a = P[n.parent], b = P[i];
         const k = 1 - n.depth / (MAXD + 1);
-        ctx.strokeStyle = "rgba(147,201,109," + (0.14 + 0.32 * k).toFixed(3) + ")";
-        ctx.lineWidth = Math.max(0.55, 3.4 * k * k);
+        ctx.strokeStyle = "rgba(190,255,150," + (0.7 + 0.3 * k).toFixed(3) + ")";
+        ctx.lineWidth = Math.max(1.2, 5 * k * k);
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(a.x + (b.x - a.x) * prog, a.y + (b.y - a.y) * prog); ctx.stroke();
       }
       // neural links
-      ctx.lineWidth = 0.6;
+      ctx.shadowBlur = 8; ctx.shadowColor = "rgba(150,220,255,0.8)";
+      ctx.lineWidth = 1.1;
       neural.links.forEach((l) => {
         const A = nodes[l[0]], B = nodes[l[1]];
         if (t < Math.max(A.birth, B.birth) + 300) return;
-        ctx.strokeStyle = "rgba(168,200,216,0.10)";
+        ctx.strokeStyle = "rgba(190,235,255,0.5)";
         ctx.beginPath(); ctx.moveTo(P[l[0]].x, P[l[0]].y); ctx.lineTo(P[l[1]].x, P[l[1]].y); ctx.stroke();
       });
       // leaves
+      ctx.shadowColor = "rgba(210,255,170,1)"; ctx.shadowBlur = 18;
       neural.tips.forEach((i) => {
         const n = nodes[i];
         if (t < n.birth) return;
         const d = Math.hypot(P[i].x - mx, P[i].y - my);
         const near = Math.max(0, 1 - d / 140);
         const fade = Math.min(1, (t - n.birth) / 500);
-        ctx.fillStyle = "rgba(194,230,162," + ((0.35 + 0.65 * near) * fade).toFixed(3) + ")";
-        ctx.beginPath(); ctx.arc(P[i].x, P[i].y, 1.5 + near * 2.6, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "rgba(226,255,196," + ((0.9 + 0.1 * near) * fade).toFixed(3) + ")";
+        ctx.beginPath(); ctx.arc(P[i].x, P[i].y, 3 + near * 3, 0, Math.PI * 2); ctx.fill();
         if (near > 0.2 && !reduced && Math.random() < near * 0.05 && neural.pulses.length < 46) neural.spawn(i);
       });
 
@@ -742,14 +745,16 @@
           if (s.f >= 1) { neural.pulses.splice(q, 1); neural.flash = Math.min(1.4, neural.flash + 0.22); continue; }
           const A = P[s.path[s.seg]], B = P[s.path[s.seg + 1]];
           const x = A.x + (B.x - A.x) * s.f, y = A.y + (B.y - A.y) * s.f;
-          const g = ctx.createRadialGradient(x, y, 0, x, y, 9);
-          g.addColorStop(0, s.amber ? "rgba(240,190,110,0.95)" : "rgba(214,242,186,0.95)");
+          ctx.shadowBlur = 0;
+          const g = ctx.createRadialGradient(x, y, 0, x, y, 16);
+          g.addColorStop(0, s.amber ? "rgba(240,190,110,0.95)" : "rgba(236,255,214,1)");
           g.addColorStop(1, "rgba(147,201,109,0)");
-          ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, 9, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, 16, 0, Math.PI * 2); ctx.fill();
         }
         neural.flash *= 0.965;
       }
 
+      ctx.shadowBlur = 0; ctx.shadowColor = "transparent";
       // the root, where the decision forms
       const r = P[0], glow = 0.25 + Math.min(1, neural.flash) * 0.55;
       const rg = ctx.createRadialGradient(r.x, r.y - 30, 0, r.x, r.y - 30, 150);
